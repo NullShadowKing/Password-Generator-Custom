@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <article class="container">
+      <h1>Password Generator</h1>
+      <article class="passcontainer">
+        <h3 id="passwordBox" class="passwordHolder">Password</h3>
+        <button id="addToClipboard" class="addToClipB">
+          <img src="CopyIcon.png" alt="" />
+        </button>
+      </article>
+      <article class="rangeContainer">
+        <input
+          type="range"
+          value="6"
+          min="6"
+          max="25"
+          id="passLengthRange"
+          class="range"
+          oninput="passLengthAmount.value=value"
+        />
+        <input
+          type="number"
+          value="6"
+          min="6"
+          max="25"
+          id="passLengthAmount"
+          class="lenghNumber"
+          oninput="passLengthRange.value=value"
+        />
+      </article>
+      <article class="optionsGrid">
+        <label for="includeUpper">Includes UpperCase</label>
+
+        <label class="switch">
+          <input type="checkbox" id="includeUppers" />
+          <span class="slider round"></span>
+        </label>
+
+        <label for="includeNumbers">Includes Numbers</label>
+
+        <label class="switch">
+          <input type="checkbox" id="includeNumbers" />
+          <span class="slider round"></span>
+        </label>
+
+        <label for="includeSymbols">Includes Symbols</label>
+
+        <label class="switch">
+          <input type="checkbox" id="includeSymbols" />
+          <span class="slider round"></span>
+        </label>
+      </article>
+      <button id="passwordGeneratorbtn" class="btn">Generate</button>
+    </article>
+  </body>
+</html>
